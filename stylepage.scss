@@ -1,0 +1,135 @@
+//variable
+$font-size: 16px;
+$font-color: #2e2e2e;
+$box-shadow: 7px 8px 14px rgb(205 199 199 / 50%);
+$btn-color: #909090;
+$btn-shadow: 0px 3px 8px rgba(159, 159, 159, 0.5);
+$btn-active: #90cbe0;
+$btn-transition: color 0.8s ease;
+$playfair-font: "Playfair Display", serif;
+$menu-color: #ff9401 !important;
+$hover-shadow: 0px 1px 4px 1px rgb(255 161 33 / 46%);
+$drop-shadow: drop-shadow(2px 4px 6px #ff940182);
+$margin-borttom: 34px;
+$gradient: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255 250 243) 100%);
+//public styles
+a {
+  text-decoration: none !important;
+  color: $font-color;
+}
+
+//extends
+.button-style {
+  display: block;
+  background-color: transparent;
+  border: 1px solid #ffaf41;
+  padding: 5px 30px;
+  background-color: #ffddad;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+  &:hover {
+    box-shadow: $btn-shadow;
+    background-color: $menu-color;
+  }
+}
+.long-btn {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: -18px;
+  padding: 10px 29px;
+  border-radius: 40px;
+  color: white;
+  background-color: $menu-color;
+  border: none;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #ffaf41 !important;
+  }
+}
+
+.headertitle {
+  color: #ff9401;
+  font-size: $font-size + 3px;
+  font-weight: 600;
+}
+.header-slogan {
+  font-size: $font-size + 18px;
+  font-weight: 700;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+}
+//mixins
+@mixin flex($flex: flex, $position-x: center, $position-y: center) {
+  display: $flex;
+  justify-content: $position-x;
+  align-items: $position-y;
+}
+@mixin margin-padding($top, $right, $bottom, $left, $margin: true) {
+  @if ($margin) {
+    margin: $top $right $bottom $left;
+  } @else {
+    padding: $top $right $bottom $left;
+  }
+}
+
+@mixin section-creator($flex: flex, $flex-basis, $max-width) {
+  display: flex;
+  flex-basis: flex-basis;
+  max-width: $max-width;
+}
+@mixin border-radious($top-left, $top-right, $bottom-right, $bottom-left) {
+  border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
+//nav styles
+@import "nav";
+@import "header";
+@import "about-us";
+@import "features";
+@import "recipe";
+@import "takeaway";
+@import "testimonial";
+//testimonial styles
+footer {
+  background-image: $gradient;
+  padding: 40px 10px;
+position: relative;
+  ul {
+    @include flex(flex, center, center);
+    flex-direction: column;
+    li:nth-child(1) {
+      font-size: $font-size + 2px;
+      font-weight: 550;
+    }
+  }
+  li {
+    padding: 10px;
+    a {
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    a:hover {
+      color: $menu-color;
+      padding-right: 30px;
+    }
+  }
+  .logo {
+
+    img {
+      width: 30px;
+    }
+    strong {
+      font-weight: bold !important;
+    }
+  }
+  .foo-1 {
+    position: absolute;
+    right: 70%;
+    width: 100px;
+    top: -7px;
+  }
+}

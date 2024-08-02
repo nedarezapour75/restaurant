@@ -1,0 +1,41 @@
+#features{
+    @include margin-padding(100px, 0, 100px,0 , true);
+    .header{
+      display: flex;
+ justify-content: center;
+ align-items: center;
+  flex-direction: column;
+  line-height: 32px;
+  align-items: center;
+      strong{
+        color: $menu-color;
+    font-size: 23px
+      }
+      h2{
+        font-size: $font-size + 18px;
+        font-weight: 700;
+      }
+    }
+    .cards-wrapper{
+     
+      .cards{
+        @include margin-padding(70px,0 ,40px ,0 , true);
+        @include flex(flex, center, center);
+        flex-direction: column;
+        .cards-header{
+          p{
+            font-size: $font-size ;
+            font-weight: 800;
+            margin: 40px auto 15px auto;
+          }
+        }
+        .cards-body{
+          p{
+            padding: 0 10px;
+            text-align: center !important;
+            font-size: $font-size + 3px;
+          }
+        }
+      }
+    }
+    }

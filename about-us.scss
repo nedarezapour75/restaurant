@@ -1,0 +1,60 @@
+#about-us {
+    margin-top: 100px;
+    padding-top: 50px;
+    background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(247,244,239,1) 100%);
+    height: 100vh;
+    .container {
+      .row {
+        .right-side-none{
+          padding: 10px 0 0 65px;
+          .about-us-text p:nth-child(1){
+            font-size: $font-size + 8px;
+            color: $menu-color;
+            margin-bottom: $margin-borttom;
+            font-weight: 600;
+          }
+          .about-us-text p:nth-child(2){
+            font-size: $font-size + 18px;
+            font-weight: 700;
+           margin-bottom: $margin-borttom;
+          }
+          .about-us-text p:nth-child(3){
+            font-weight: 450;
+           margin-bottom: $margin-borttom;
+           line-height: 32px;
+           width: 400px;
+           text-align: right;
+           
+          }
+          .au-btn{
+            @extend .long-btn
+          }
+        }
+        .left-side-none {
+          position: relative;
+          .au-1 {
+            position: absolute;
+            z-index: 1;
+            left: 3px;
+            filter: $drop-shadow;
+          }
+          .au-2 {
+            position: absolute;
+            left: 28px;
+            top: 19px;
+          .au-3 {
+            position: absolute;
+            left: 9px;
+          }
+        }
+  
+      }
+    }
+  }
+  }
+  @media (max-width: 768px) {
+    #about-us {
+      display: none;
+    }
+  }

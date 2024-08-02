@@ -1,0 +1,212 @@
+#nav {
+    .container {
+      .row {
+        @include flex(flex, space-between, start);
+        @include margin-padding(20px, 0, 0, 0, false);
+  
+        @media (max-width: 790px) {
+          .nav-pic {
+            display: none;
+          }
+        }
+        div.navicons {
+          span {
+            @include margin-padding(0, 10px, 0, 10px, true);
+            @include margin-padding(0, 10px, 0, 10px, false);
+          }
+          // basket
+          span.basket {
+            .dropdown {
+              .dropdown-toggle {
+                transition: color 1s ease;
+              }
+              .dropdown-toggle:hover {
+                color: $menu-color;
+              }
+              .dropdown-toggle::after {
+                display: none;
+              }
+              .dropdown-menu {
+                padding: 10px;
+                line-height: 30px;
+          .orders{
+            a.dropdown-item {
+              @include margin-padding(15px, 15px, 15px, 15px, false);
+              @include flex(flex, space-between, center);
+              border-bottom:1px solid $menu-color ;
+            }
+  div.order-details{
+    @include flex(flex, center, center);
+  flex-direction: column;
+  .order-name{
+    font-size: $font-size + 3px;
+  }
+  }
+                span.material-symbols-outlined {
+                  color: $menu-color;
+                }
+                ul {
+                  @include margin-padding(3px, 0, 0, 3px, true);
+                  li {
+                    text-align: left !important;
+                    direction: ltr;
+                    @include margin-padding(0, 0, 0, 0, false);
+                  }
+                }
+  
+                img {
+                  width: 114px;
+                }
+              }
+  
+            }
+          }
+          button.buy {
+            margin: 10px auto;
+           
+            display: block;
+            background-color: transparent;
+            border: 1px solid #ffaf41;
+            padding: 5px 30px;
+            background-color: #ffddad;
+            transition: all 0.5s ease;
+            &:hover {
+              box-shadow: $btn-shadow;
+              background-color: $menu-color;
+            }
+          }
+        }
+        // mega meu
+        div.dropdown {
+          display: inline;
+          @media (min-width: 770px) {
+            .dropdown-menu {
+              width: 500px;
+            }
+          }
+          .dropdown-toggle {
+            transition: color 1s ease;
+          }
+          .dropdown-toggle:hover {
+            color: $menu-color;
+          }
+          .dropdown-toggle::after {
+            display: none;
+          }
+          .dropdown-menu {
+            overflow: hidden;
+            position: absolute;
+           padding-top: 30px !important;
+            ul {
+              @include margin-padding(-35px, 0px, 0, 0px, true);
+              li a {
+                padding: 5px 5px !important;
+                transition: color 0.5s ease;
+                text-align: center !important;
+                &:hover {
+                  color: $menu-color;
+                }
+              }
+            }
+            ul li:nth-child(1) a {
+              color: $font-color;
+              border-bottom: 2px solid $menu-color;
+              font-size: $font-size + 5px;
+              font-family: $playfair-font;
+              font-weight: bold;
+            }
+            ul li:not(:nth-child(1)) {
+              @include margin-padding(2px, 0, 0, 10px, false);
+              font-size: $font-size;
+            }
+          }
+          @media (max-width: 770px) {
+            .dropdown-menu {
+              .container {
+                margin-right: auto !important;
+                margin-left: auto !important;
+              }
+            }
+            .dropdown-img {
+              display: none;
+            }
+            .dropdown-menu {
+              left: -400px;
+              text-align: center;
+              ul {
+                @include margin-padding(10px, 0, 0, 0, true);
+              }
+            }
+          }
+          .dropdown-menu.show{
+            left: -246px;
+            min-width:375px;
+            top: 50px !important;
+  
+            .dropdown-img {
+              position: absolute;
+              right: -67px;
+              bottom: -66px;
+              width: 254px;
+            }
+          }
+        }
+        // search- modal
+   span.search-modal{
+    .modal-btn{
+      background-color: transparent;
+      border: none;
+      outline: 0;
+      transition: all .5s ease;
+      &:hover{
+        color: $menu-color;
+      }
+    }
+  .fade{
+    background-color: #ffe0b5;
+    .modal-content{
+      border: 0;
+      input{
+        border: none;
+        outline: 0;
+      }
+      .input-group-append{
+       span{
+        background-color: white;
+        border: none;
+       }
+      }
+      a{
+        @extend .button-style;
+        color: rgb(66, 65, 65);
+      }
+      
+    }
+  }
+   }
+      }
+      .nav-pic {
+        position: relative;
+        max-width: 251px;
+        top: -47px;
+      }
+      @media (max-width: 540px) {
+        .logo {
+          display: none;
+        }
+      }
+      div.logo {
+        img {
+          width: 25px;
+          vertical-align: -8px;
+        }
+        strong {
+          font-family: $playfair-font;
+          font-size: $font-size + 3px;
+          color: $font-color;
+        }
+      }
+    }
+  }
+  }
+  
